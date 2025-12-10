@@ -46,14 +46,13 @@ public class Programa2 {
 					String numero = teclado.nextLine();
 						if(numero.isEmpty()){
 							System.out.println("Volviendo al menú...");
-						return;
+						break;
 						}
 					System.out.print("\tPrecio: ");
 					Float precio = Float.valueOf(teclado.nextLine());
 					
-					Envio envio = new Envio();
-					envio.numero = numero;
-					envio.precio = precio;
+					Envio envio = new Envio(numero, precio); // lo ponemos entre parentesis porque metemos en la clase Envio
+					
 					envios[iEnvios++] = envio;
 
 					System.out.println("Registro OK");
@@ -68,22 +67,19 @@ public class Programa2 {
 	public static void verInformeEnvios(){
 		
 	System.out.println("\n\tINFORME DE ENVÍOS");
-		if(iEnvios == 0){
-			System.out.println("No hay envíos registrados.");
-		return;
-		}
+		
 
     Float total = 0.00f;
 
 		for(int i = 0; i < iEnvios; i++){
 			Envio numeroEnvios = envios[i];
-			System.out.println((i+1) + ". Número: " + numeroEnvios.numero + " ---> Precio: " + numeroEnvios.precio + " €");
+			System.out.println((i+1) + ". " +  numeroEnvios.verComoString());
 			total += numeroEnvios.precio;
 		}
 
 		System.out.println("--------------------------");
-		System.out.println("Total de envíos: " + iEnvios);
-		System.out.println("Importe total: " + total + " €");
+		
+		System.out.println("Importe total: " + total + " €\n");
 		}
 	
 

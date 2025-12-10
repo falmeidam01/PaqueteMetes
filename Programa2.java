@@ -1,3 +1,7 @@
+/*
+* Programa.java
+*@author: Linus Torvalds
+*/
 import java.util.Scanner;
 public class Programa2 {
 	static Scanner teclado = new Scanner(System.in);

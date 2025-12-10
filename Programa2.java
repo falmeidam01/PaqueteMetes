@@ -19,6 +19,9 @@ public class Programa2 {
 				case "2":
 						verInformeEnvios();
 						break;
+				case "3":
+						enviar();
+						break;
 				case "x":
 				case "X":
 						repetirMenu = false;
@@ -37,6 +40,7 @@ public class Programa2 {
 			System.out.println("\nAPLICACIÓN DE PaqueteMetes");
 			System.out.println("\t1. Registrar Envío");
 			System.out.println("\t2. Ver Informe de Envíos");
+			System.out.println("\t3. Realizar Envio");
 			System.out.println("\tx. Salir");
 			System.out.println("\tOpción: ");
 			return teclado.nextLine();
@@ -86,7 +90,9 @@ public class Programa2 {
 		System.out.println("Importe total: " + total + " €\n");
 		}
 	
-
+	public static void enviar(){
+		
+	}
 	
 } 
 

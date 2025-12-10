@@ -1,3 +1,7 @@
+/*
+* Programa.java
+*@author: Felipe Almeida
+*/
 import java.util.Scanner;
 public class Programa2 {
 	static Scanner teclado = new Scanner(System.in);
